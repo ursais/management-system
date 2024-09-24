@@ -143,10 +143,12 @@ class MgmtsystemNonconformity(models.Model):
 
     @api.model
     def _default_reference(self):
-        if self.env.context.get("active_model") and self.env.context.get("active_id"):
+        if self.env.context.get("mgmtsystem_nonconformity") and self.env.context.get(
+            "id"
+        ):
             return (
-                self.env[self.env.context["active_model"]]
-                .browse(self.env.context.get("active_id"))
+                self.env[self.env.context["mgmtsystem_nonconformity"]]
+                .browse(self.env.context.get("id"))
                 .exists()
                 .display_name
             )
