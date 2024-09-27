@@ -5,13 +5,11 @@
         t-inherit="mail.Chatter"
         t-inherit-mode="extension"
     >
-        <xpath
-            expr="//Dropdown"
-            position="before"
-        >
+        <xpath expr="//Dropdown" position="before">
             <button
                 class="o_ChatterTopbar_button o_ChatterTopbar_buttonNonConformities btn btn-light btn-primary"
-                type="button">
+                type="button"
+            >
 <!--                t-att-disabled="!chatterTopbar.chatter.isTemporary and !chatterTopbar.chatter.hasWriteAccess"-->
 <!--                t-on-click="() => this.chatterTopbar.chatter.onClickShowNonConformities()"-->
 <!--                t-if="chatterTopbar.chatter.webRecord.data.non_conformity_count !== undefined"-->
