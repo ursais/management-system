@@ -11,10 +11,7 @@
             <tree>
                 <field name="name" />
                 <field name="type" />
-                <field
-                    name="action_id"
-                    column_invisible="type != 'action"
-                />
+                <field name="action_id" column_invisible="type != 'action'" />
                 <field
                     name="nonconformity_id"
                     column_invisible="type != 'nonconformity'"
@@ -51,13 +48,10 @@
                     <field name="name" />
                     <field name="type" />
                     <newline />
-                    <field
-                        name="action_id"
-                        invisible="type != 'action'"
-                    />
+                    <field name="action_id" invisible="type != 'action'" />
                     <field
                         name="nonconformity_id"
-                        invisible="type != 'nonconformity"
+                        invisible="type != 'nonconformity'"
                     />
                     <newline />
                     <field name="decision" />
@@ -81,9 +75,9 @@
         <field name="type">tree</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="name" readonly="state == 'done" />
-                <field name="date" readonly="state == 'done" />
-                <field name="reference" readonly="1"/>
+                <field name="name" readonly="state == 'done'" />
+                <field name="date" readonly="state == 'done'" />
+                <field name="reference" readonly="1" />
                 <field name="company_id" groups="base.group_multi_company" />
                 <!-- Invisible fields below are to allow their use in domains of this view -->
                 <field name="state" readonly="1" column_invisible="1" />
@@ -113,7 +107,7 @@
                     <separator orientation="vertical" />
                     <field name="name" />
                     <field name="date" />
-                    <field name="reference" readonly="1"/>
+                    <field name="reference" readonly="1" />
                     <field name="company_id" groups="base.group_multi_company" />
                 </group>
             </search>
@@ -137,20 +131,14 @@
                 <sheet>
                     <label for="name" class="oe_edit_only" />
                     <h1>
-                        <field
-                            name="name"
-                            readonly="state == 'done'"
-                        />
+                        <field name="name" readonly="state == 'done'" />
                     </h1>
                     <group>
                         <group>
-                            <field
-                                name="date"
-                                readonly="state == 'done'"
-                            />
+                            <field name="date" readonly="state == 'done'" />
                         </group>
                         <group>
-                            <field name="reference" readonly="1"/>
+                            <field name="reference" readonly="1" />
                             <field
                                 name="company_id"
                                 groups="base.group_multi_company"
