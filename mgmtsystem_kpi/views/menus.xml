@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <menuitem
+        id="menu_mgmtsystem_kpi"
+        name="KPI"
+        action="action_mgmtsystem_kpi"
+        parent="mgmtsystem.menu_mgmtsystem_main"
+        sequence="15"
+        groups="mgmtsystem.group_mgmtsystem_viewer"
+    />
+
+    <menuitem
+        id="menu_mgmtsystem_configuration_kpi"
+        name="KPI"
+        parent="mgmtsystem.menu_mgmtsystem_configuration"
+        groups="mgmtsystem.group_mgmtsystem_manager"
+        sequence="20"
+    />
+
+    <menuitem
+        id="menu_mgmtsystem_configuration_kpi_category"
+        name="Categories"
+        action="action_mgmtsystem_kpi_category"
+        parent="menu_mgmtsystem_configuration_kpi"
+        groups="mgmtsystem.group_mgmtsystem_manager"
+        sequence="10"
+    />
+
+    <menuitem
+        id="menu_mgmtsystem_configuration_kpi_threshold"
+        name="Thresholds"
+        action="action_mgmtsystem_kpi_threshold"
+        parent="menu_mgmtsystem_configuration_kpi"
+        groups="mgmtsystem.group_mgmtsystem_manager"
+        sequence="20"
+    />
+
+    <menuitem
+        id="menu_mgmtsystem_configuration_kpi_range"
+        name="Ranges"
+        action="action_mgmtsystem_kpi_threshold_range"
+        parent="menu_mgmtsystem_configuration_kpi"
+        groups="mgmtsystem.group_mgmtsystem_manager"
+        sequence="30"
+    />
+</odoo>
