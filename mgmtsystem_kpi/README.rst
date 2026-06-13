@@ -32,54 +32,21 @@ Key Performance Indicator
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
-This module provides the basis for creating key performance indicators,
-including static and dynamic thresholds (SQL query or Python code) on
-the local database.
+This module provides a menu item to manage key performance indicators
+under the Management Systems application.
 
-A scheduler runs every hour and updates KPI values based on the
-periodicity of each KPI. KPI computation can also be done manually.
-
-A threshold is a list of ranges. Each range has a name, minimum and
-maximum values (fixed, SQL query, or Python code), and a color (RGB
-code).
+For more information, please see
+https://github.com/OCA/reporting-engine/blob/19.0/kpi/README.rst
 
 **Table of contents**
 
 .. contents::
    :local:
 
-Configuration
-=============
-
-**Configure categories**
-
-Go to Management System > Configuration > KPI > Categories.
-
-**Configure ranges and thresholds**
-
-Go to Management System > Configuration > KPI > Ranges and define the
-color bands with their minimum and maximum values.
-
-Go to Management System > Configuration > KPI > Thresholds and attach
-the ranges to each threshold.
-
 Usage
 =====
 
-Go to Management System > Management System > KPI and create your KPIs.
-
-Select a category, a threshold, and define how the KPI value is computed
-(Python code or a local SQL query returning a column named ``value``).
-
-Use **Compute KPI Now** on the KPI form to run a computation
-immediately. Active KPIs are also updated automatically by the scheduled
-action.
-
-Known issues / Roadmap
-======================
-
-- Restore external database sources support when
-  ``base_external_dbsource`` is available for Odoo 19.0.
+See https://github.com/OCA/reporting-engine/blob/19.0/kpi/README.rst
 
 Bug Tracker
 ===========
@@ -98,11 +65,20 @@ Authors
 -------
 
 * Savoir-faire Linux
+* Gray Matter Logic
 
 Contributors
 ------------
 
-- Savoir-faire Linux
+- Daniel Reis <dreis.pt@hotmail.com>
+
+- Glen Dromgoole <gdromgoole@tier1engineering.com>
+
+- Loic Lacroix <loic.lacroix@savoirfairelinux.com>
+
+- Sandy Carter <sandy.carter@savoirfairelinux.com>
+
+- Gervais Naoussi <gervaisnaoussi@gmail.com>
 
 - `Gray Matter Logic <https://www.graymatterlogic.com>`__:
 
@@ -120,6 +96,14 @@ This module is maintained by the OCA.
 OCA, or the Odoo Community Association, is a nonprofit organization whose
 mission is to support the collaborative development of Odoo features and
 promote its widespread use.
+
+.. |maintainer-max3903| image:: https://github.com/max3903.png?size=40px
+    :target: https://github.com/max3903
+    :alt: max3903
+
+Current `maintainer <https://odoo-community.org/page/maintainer-role>`__:
+
+|maintainer-max3903| 
 
 This module is part of the `OCA/management-system <https://github.com/OCA/management-system/tree/19.0/mgmtsystem_kpi>`_ project on GitHub.
 
