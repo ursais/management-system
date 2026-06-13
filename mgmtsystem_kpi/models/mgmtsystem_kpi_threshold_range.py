@@ -48,7 +48,7 @@ class MgmtsystemKpiThresholdRange(models.Model):
 
     name = fields.Char(required=True)
     valid = fields.Boolean(compute="_compute_valid", store=True)
-    invalid_message = fields.Char(compute="_compute_valid")
+    invalid_message = fields.Char(compute="_compute_invalid_message")
     min_type = fields.Selection(
         [
             ("static", "Fixed value"),
@@ -137,12 +137,15 @@ class MgmtsystemKpiThresholdRange(models.Model):
     @api.depends("min_value", "max_value")
     def _compute_valid(self):
         for record in self:
+            record.valid = record.max_value >= record.min_value
+
+    @api.depends("min_value", "max_value")
+    def _compute_invalid_message(self):
+        for record in self:
             if record.max_value < record.min_value:
-                record.valid = False
                 record.invalid_message = (
                     "Minimum value is greater than the maximum value! "
                     "Please adjust them."
                 )
             else:
-                record.valid = True
                 record.invalid_message = ""

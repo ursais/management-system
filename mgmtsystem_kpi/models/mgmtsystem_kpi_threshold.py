@@ -18,7 +18,7 @@ class MgmtsystemKpiThreshold(models.Model):
         string="Ranges",
     )
     valid = fields.Boolean(compute="_compute_valid", store=True)
-    invalid_message = fields.Char(compute="_compute_valid")
+    invalid_message = fields.Char(compute="_compute_invalid_message")
     kpi_ids = fields.One2many("mgmtsystem.kpi", "threshold_id", string="KPIs")
     company_id = fields.Many2one(
         "res.company",
@@ -33,21 +33,37 @@ class MgmtsystemKpiThreshold(models.Model):
     )
     def _compute_valid(self):
         for threshold in self:
-            valid = True
-            message = ""
             ranges = threshold.range_ids.filtered("valid").sorted("min_value")
+            valid = True
             for index, current_range in enumerate(ranges):
                 if index == 0:
                     continue
                 previous_range = ranges[index - 1]
                 if previous_range.max_value > current_range.min_value:
                     valid = False
+                    break
+            threshold.valid = valid
+
+    @api.depends(
+        "range_ids",
+        "range_ids.valid",
+        "range_ids.min_value",
+        "range_ids.max_value",
+    )
+    def _compute_invalid_message(self):
+        for threshold in self:
+            ranges = threshold.range_ids.filtered("valid").sorted("min_value")
+            message = ""
+            for index, current_range in enumerate(ranges):
+                if index == 0:
+                    continue
+                previous_range = ranges[index - 1]
+                if previous_range.max_value > current_range.min_value:
                     message = (
                         "2 of your ranges are overlapping! Please make sure "
                         "your ranges do not overlap."
                     )
                     break
-            threshold.valid = valid
             threshold.invalid_message = message
 
     @api.constrains("range_ids")
