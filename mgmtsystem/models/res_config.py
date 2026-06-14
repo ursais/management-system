@@ -31,6 +31,13 @@ class MgmtsystemConfigSettings(models.TransientModel):
         "- This installs the module mgmtsystem_information_security.",
     )
 
+    # Industries
+    module_mgmtsystem_iatf16949 = fields.Boolean(
+        "Automotive",
+        help="Provide automotive quality management tools.\n"
+        "- This installs the module mgmtsystem_iatf16949.",
+    )
+
     # Applications
     module_mgmtsystem_action = fields.Boolean(
         "Actions",

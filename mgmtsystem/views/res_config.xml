@@ -39,6 +39,15 @@
                         </setting>
                     </block>
 
+                    <block title="Industries" name="mgmtsystem_industries_setting">
+                        <setting
+                            string="Automotive"
+                            help="Manage your automotive quality management system (IATF 16949)."
+                        >
+                            <field name="module_mgmtsystem_iatf16949" />
+                        </setting>
+                    </block>
+
                     <block title="Applications" name="mgmtsystem_applications_setting">
                         <setting
                             string="Actions"
