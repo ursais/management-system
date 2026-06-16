@@ -43,6 +43,12 @@ msgid "Auditor"
 msgstr "Auditor(a)"
 
 #. module: mgmtsystem
+#: model:ir.model.fields,field_description:mgmtsystem.field_res_config_settings__module_mgmtsystem_iatf16949
+#: model_terms:ir.ui.view,arch_db:mgmtsystem.res_config_settings_view_form
+msgid "Automotive"
+msgstr "Automotivo"
+
+#. module: mgmtsystem
 #: model:ir.model.fields,field_description:mgmtsystem.field_res_config_settings__module_mgmtsystem_audit
 #: model_terms:ir.ui.view,arch_db:mgmtsystem.res_config_settings_view_form
 msgid "Audits"
@@ -174,6 +180,11 @@ msgid "Information Security Manual Template"
 msgstr "Modelo de manual de Segurança da Informação"
 
 #. module: mgmtsystem
+#: model_terms:ir.ui.view,arch_db:mgmtsystem.res_config_settings_view_form
+msgid "Industries"
+msgstr "Indústrias"
+
+#. module: mgmtsystem
 #: model:ir.model.fields,field_description:mgmtsystem.field_mgmtsystem_system__write_uid
 msgid "Last Updated by"
 msgstr "Atualizado pela última vez por"
@@ -182,6 +193,12 @@ msgstr "Atualizado pela última vez por"
 #: model:ir.model.fields,field_description:mgmtsystem.field_mgmtsystem_system__write_date
 msgid "Last Updated on"
 msgstr "Atualizado pela última vez em"
+
+#. module: mgmtsystem
+#: model:ir.model.fields,field_description:mgmtsystem.field_res_config_settings__module_mgmtsystem_iso17025
+#: model_terms:ir.ui.view,arch_db:mgmtsystem.res_config_settings_view_form
+msgid "Laboratories"
+msgstr "Laboratórios"
 
 #. module: mgmtsystem
 #: model_terms:ir.ui.view,arch_db:mgmtsystem.res_config_settings_view_form
@@ -221,6 +238,11 @@ msgstr ""
 
 #. module: mgmtsystem
 #: model_terms:ir.ui.view,arch_db:mgmtsystem.res_config_settings_view_form
+msgid "Manage your automotive quality management system (IATF 16949)."
+msgstr "Gerencie seu sistema de gestão da qualidade automotiva (IATF 16949)."
+
+#. module: mgmtsystem
+#: model_terms:ir.ui.view,arch_db:mgmtsystem.res_config_settings_view_form
 msgid "Manage your environment management systems (ISO 14001)."
 msgstr ""
 
@@ -234,6 +256,11 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:mgmtsystem.res_config_settings_view_form
 msgid "Manage your information security management systems (ISO 27001)"
 msgstr ""
+
+#. module: mgmtsystem
+#: model_terms:ir.ui.view,arch_db:mgmtsystem.res_config_settings_view_form
+msgid "Manage your laboratory quality management system (ISO 17025)."
+msgstr "Gerencie seu sistema de gestão da qualidade de laboratório (ISO 17025)."
 
 #. module: mgmtsystem
 #: model_terms:ir.ui.view,arch_db:mgmtsystem.res_config_settings_view_form
@@ -446,6 +473,15 @@ msgstr ""
 "-Este Instala o módulo mgmtsystem_audit."
 
 #. module: mgmtsystem
+#: model:ir.model.fields,help:mgmtsystem.field_res_config_settings__module_mgmtsystem_iatf16949
+msgid ""
+"Provide automotive quality management tools.\n"
+"- This installs the module mgmtsystem_iatf16949."
+msgstr ""
+"Fornecer ferramentas de gestão da qualidade automotiva.\n"
+"- Isso instala o módulo mgmtsystem_iatf16949."
+
+#. module: mgmtsystem
 #: model:ir.model.fields,help:mgmtsystem.field_res_config_settings__module_mgmtsystem_claim
 msgid ""
 "Provide claim tools.\n"
@@ -489,6 +525,15 @@ msgid ""
 msgstr ""
 "Fornecer ferramentas de segurança da informação.\n"
 "-Este Instala o mgmtsystem_information_security módulo."
+
+#. module: mgmtsystem
+#: model:ir.model.fields,help:mgmtsystem.field_res_config_settings__module_mgmtsystem_iso17025
+msgid ""
+"Provide laboratory quality management tools.\n"
+"- This installs the module mgmtsystem_iso17025."
+msgstr ""
+"Fornecer ferramentas de gestão da qualidade para laboratórios.\n"
+"- Isso instala o módulo mgmtsystem_iso17025."
 
 #. module: mgmtsystem
 #: model:ir.model.fields,help:mgmtsystem.field_res_config_settings__module_mgmtsystem_nonconformity

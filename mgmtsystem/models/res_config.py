@@ -37,6 +37,11 @@ class MgmtsystemConfigSettings(models.TransientModel):
         help="Provide automotive quality management tools.\n"
         "- This installs the module mgmtsystem_iatf16949.",
     )
+    module_mgmtsystem_iso17025 = fields.Boolean(
+        "Laboratories",
+        help="Provide laboratory quality management tools.\n"
+        "- This installs the module mgmtsystem_iso17025.",
+    )
 
     # Applications
     module_mgmtsystem_action = fields.Boolean(

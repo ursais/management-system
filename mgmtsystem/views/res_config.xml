@@ -19,6 +19,12 @@
                         >
                             <field name="module_mgmtsystem_iatf16949" />
                         </setting>
+                        <setting
+                            string="Laboratories"
+                            help="Manage your laboratory quality management system (ISO 17025)."
+                        >
+                            <field name="module_mgmtsystem_iso17025" />
+                        </setting>
                     </block>
 
                     <block title="Management Systems" name="mgmtsystem_systems_setting">
