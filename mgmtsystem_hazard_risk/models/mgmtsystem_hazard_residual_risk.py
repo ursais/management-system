@@ -14,9 +14,7 @@ class MgmtsystemHazardResidualRisk(models.Model):
     probability_id = fields.Many2one(
         "mgmtsystem.risk.probability", "Probability", required=True
     )
-    severity_id = fields.Many2one(
-        "mgmtsystem.risk.severity", "Severity", required=True
-    )
+    severity_id = fields.Many2one("mgmtsystem.risk.severity", "Severity", required=True)
     usage_id = fields.Many2one("mgmtsystem.hazard.usage", "Occupation / Usage")
     acceptability = fields.Boolean()
     justification = fields.Text()
