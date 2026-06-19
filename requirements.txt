@@ -1,2 +1,0 @@
-# Required until https://github.com/OCA/management-system/pull/814 is merged
-odoo-addon-mgmtsystem_risk @ git+https://github.com/ursais/management-system.git@19.0-add-mgmtsystem_risk_probability_severity#subdirectory=mgmtsystem_risk
