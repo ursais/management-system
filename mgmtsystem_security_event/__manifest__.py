@@ -3,7 +3,7 @@
 
 {
     "name": "Feared Events",
-    "version": "19.0.1.0.0",
+    "version": "19.0.2.0.0",
     "author": "Savoir-faire Linux, Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/management-system",
     "license": "AGPL-3",
@@ -11,7 +11,7 @@
     "depends": [
         "mgmtsystem",
         "document_page",
-        "mgmtsystem_hazard",
+        "mgmtsystem_risk",
     ],
     "data": [
         "data/document_page.xml",
