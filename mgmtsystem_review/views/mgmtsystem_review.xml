@@ -187,6 +187,21 @@
                                 readonly=" state == 'done'"
                             />
                         </page>
+                        <page string="KPI History">
+                            <field
+                                name="kpi_history_ids"
+                                nolabel="1"
+                                readonly="state == 'done'"
+                            >
+                                <list>
+                                    <field name="name" />
+                                    <field name="kpi_id" />
+                                    <field name="date" />
+                                    <field name="value" />
+                                    <field name="color" widget="color" />
+                                </list>
+                            </field>
+                        </page>
                     </notebook>
                 </sheet>
                 <chatter />

@@ -23,6 +23,13 @@ class MgmtsystemReview(models.Model):
     policy = fields.Html()
     changes = fields.Html()
     line_ids = fields.One2many("mgmtsystem.review.line", "review_id", "Lines")
+    kpi_history_ids = fields.Many2many(
+        "kpi.history",
+        "mgmtsystem_review_kpi_history_rel",
+        "review_id",
+        "kpi_history_id",
+        "KPI History",
+    )
     conclusion = fields.Html()
     state = fields.Selection(
         [("open", "Open"), ("done", "Closed")],
