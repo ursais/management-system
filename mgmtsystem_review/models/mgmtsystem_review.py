@@ -41,12 +41,23 @@ class MgmtsystemReview(models.Model):
         "res.company", "Company", default=lambda self: self.env.company
     )
 
+    def _default_kpi_history_ids(self):
+        kpis = self.env["kpi"].search([("active", "=", True)])
+        latest = self.env["kpi.history"]
+        for kpi in kpis:
+            if kpi.history_ids:
+                latest |= kpi.history_ids[0]
+        return latest
+
     @api.model_create_multi
     def create(self, vals_list):
         for vals in vals_list:
             vals["reference"] = self.env["ir.sequence"].next_by_code(
                 "mgmtsystem.review"
             )
+            if "kpi_history_ids" not in vals:
+                latest = self._default_kpi_history_ids()
+                vals["kpi_history_ids"] = [fields.Command.set(latest.ids)]
         return super().create(vals_list)
 
     def button_close(self):
