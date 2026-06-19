@@ -116,6 +116,12 @@
             <form string="Review">
                 <header>
                     <button
+                        name="button_update_kpi_history"
+                        string="Update KPI History"
+                        invisible="state != 'open'"
+                        type="object"
+                    />
+                    <button
                         name="button_close"
                         string="Close"
                         invisible="state != 'open'"

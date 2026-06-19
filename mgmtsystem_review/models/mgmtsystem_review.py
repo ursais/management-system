@@ -60,5 +60,19 @@ class MgmtsystemReview(models.Model):
                 vals["kpi_history_ids"] = [fields.Command.set(latest.ids)]
         return super().create(vals_list)
 
+    def button_update_kpi_history(self):
+        for review in self:
+            histories = self.env["kpi.history"].search(
+                [("date", "<=", review.date)],
+                order="kpi_id, date desc",
+            )
+            latest = self.env["kpi.history"]
+            seen = set()
+            for h in histories:
+                if h.kpi_id.id not in seen:
+                    seen.add(h.kpi_id.id)
+                    latest |= h
+            review.kpi_history_ids = latest
+
     def button_close(self):
         return self.write({"state": "done"})
