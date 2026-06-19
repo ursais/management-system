@@ -19,5 +19,8 @@
         "report/review.xml",
         "report/report.xml",
     ],
+    "demo": [
+        "demo/mgmtsystem_review.xml",
+    ],
     "installable": True,
 }

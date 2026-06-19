@@ -55,7 +55,7 @@ class MgmtsystemReview(models.Model):
             vals["reference"] = self.env["ir.sequence"].next_by_code(
                 "mgmtsystem.review"
             )
-            if "kpi_history_ids" not in vals:
+            if not vals.get("kpi_history_ids"):
                 latest = self._default_kpi_history_ids()
                 vals["kpi_history_ids"] = [fields.Command.set(latest.ids)]
         return super().create(vals_list)

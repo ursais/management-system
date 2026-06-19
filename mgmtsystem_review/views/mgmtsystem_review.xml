@@ -179,21 +179,7 @@
                                 />
                             </group>
                         </page>
-                        <page string="Lines">
-                            <field
-                                name="line_ids"
-                                nolabel="1"
-                                readonly="state == 'done'"
-                            />
-                        </page>
-                        <page string="Conclusion">
-                            <field
-                                name="conclusion"
-                                nolabel="1"
-                                readonly=" state == 'done'"
-                            />
-                        </page>
-                        <page string="KPI History">
+                        <page string="KPI">
                             <field
                                 name="kpi_history_ids"
                                 nolabel="1"
@@ -207,6 +193,20 @@
                                     <field name="color" widget="color" />
                                 </list>
                             </field>
+                        </page>
+                        <page string="Lines">
+                            <field
+                                name="line_ids"
+                                nolabel="1"
+                                readonly="state == 'done'"
+                            />
+                        </page>
+                        <page string="Conclusion">
+                            <field
+                                name="conclusion"
+                                nolabel="1"
+                                readonly=" state == 'done'"
+                            />
                         </page>
                     </notebook>
                 </sheet>
