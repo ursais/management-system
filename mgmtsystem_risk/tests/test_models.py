@@ -52,9 +52,7 @@ class TestRiskSeverity(common.TransactionCase):
         cls.env = cls.env(context=dict(cls.env.context, tracking_disable=True))
 
     def test_create(self):
-        sev = self.env["mgmtsystem.risk.severity"].create(
-            {"name": "Low", "value": 1}
-        )
+        sev = self.env["mgmtsystem.risk.severity"].create({"name": "Low", "value": 1})
         self.assertEqual(sev.name, "Low")
         self.assertEqual(sev.value, 1)
 
