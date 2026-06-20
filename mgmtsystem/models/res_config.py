@@ -9,6 +9,18 @@ class MgmtsystemConfigSettings(models.TransientModel):
 
     _inherit = "res.config.settings"
 
+    # Industries
+    module_mgmtsystem_iatf16949 = fields.Boolean(
+        "Automotive",
+        help="Provide automotive quality management tools.\n"
+        "- This installs the module mgmtsystem_iatf16949.",
+    )
+    module_mgmtsystem_iso17025 = fields.Boolean(
+        "Laboratories",
+        help="Provide laboratory quality management tools.\n"
+        "- This installs the module mgmtsystem_iso17025.",
+    )
+
     # Systems
     module_mgmtsystem_quality = fields.Boolean(
         "Quality Tools",
@@ -58,6 +70,10 @@ class MgmtsystemConfigSettings(models.TransientModel):
     module_mgmtsystem_review = fields.Boolean(
         "Reviews",
         help="Provide review tools.\n- This installs the module mgmtsystem_review.",
+    )
+    module_mgmtsystem_kpi = fields.Boolean(
+        "Key Performance Indicators",
+        help="Provide KPI tools.\n- This installs the module mgmtsystem_kpi.",
     )
 
     # Manuals
