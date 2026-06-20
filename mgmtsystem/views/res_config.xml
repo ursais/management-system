@@ -79,19 +79,17 @@
                         >
                             <field name="module_mgmtsystem_audit" />
                         </setting>
-
                         <setting
                             string="Management Reviews"
                             help="Top management reviews."
                         >
                             <field name="module_mgmtsystem_review" />
                         </setting>
-
                         <setting
-                            string="Document Approval"
-                            help="Manage the approval workflow to control your documentation."
+                            string="Key Performance Indicators"
+                            help="Manage key performance indicators."
                         >
-                            <field name="module_document_page_approval" />
+                            <field name="module_mgmtsystem_kpi" />
                         </setting>
                     </block>
                     <block title="Manuals" name="mgmtsystem_manuals_setting">
@@ -153,6 +151,12 @@
                             help="Provide a Work Instruction documentation category and template."
                         >
                             <field name="module_document_page_work_instruction" />
+                        </setting>
+                        <setting
+                            string="Document Approval"
+                            help="Manage the approval workflow to control your documentation."
+                        >
+                            <field name="module_document_page_approval" />
                         </setting>
                     </block>
                 </app>
